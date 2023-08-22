@@ -17,13 +17,12 @@
         </form>        
     </div>
     <div class="rolodex"> 
-        {% for contact in results %}
+        {% for contact in contacts %}
 		<div class="card">
-            <p>CONTACTS Hello</p>
-            <div class="photo"><img src="photo.jpg" alt=""></div>
-            <div class="name">Your Name</div>
-            <div class="phone">555-555-5555</div>
-            <div class="emal">email@gmail.com</div>
+            <div class="photo"><img src="{{ contact.getPhoto() }}" alt=""></div>
+            <div class="name">{{ contact.getFirstName() }} {{ contact.getLastName() }}</div>
+            <div class="phone">{{ contact.getPhoneNumber() }}</div>
+            <div class="email">{{ contact.getEmailAddress() }}</div>
         </div> 
         {% endfor %}        
     </div>

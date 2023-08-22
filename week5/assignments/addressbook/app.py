@@ -37,7 +37,7 @@ for contacts in newContacts ['results']:
 
 @app.route("/", methods = ['GET'])
 def home():
-    return render_template('index.html', contacts = newAddressBook.addresses)
+    return render_template('index.html', contacts = newAddressBook.getAllAddresses())
 
 @app.route("/search", methods = ['POST'])
 def search():
